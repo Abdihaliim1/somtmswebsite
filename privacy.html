@@ -4,115 +4,25 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>SomTMS Privacy</title>
-  <meta name="description" content="SomTMS privacy policy (placeholder)." />
-  <meta property="og:title" content="SomTMS Privacy" />
-  <meta property="og:description" content="SomTMS privacy policy (placeholder)." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://somtms.com/privacy.html" />
-  <meta name="theme-color" content="#ffffff" />
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="assets/styles.css" />
+  <title>Privacy — SomTMS</title>
+  <link rel="stylesheet" href="/styles.css?v=2" />
 </head>
 
 <body>
-  <div class="nav">
-    <div class="container nav-inner">
-      <a class="brand" href="index.html" aria-label="SomTMS Home">
-        <span class="logo">S</span>
-        <span>SomTMS</span>
-      </a>
-      <div class="nav-links" role="navigation" aria-label="Primary">
-        <a href="index.html">Home</a>
-        <a href="features.html">Features</a>
-        <a href="pricing.html">Pricing</a>
-        <a href="security.html">Security</a>
-        <a href="contact.html">Contact</a>
-      </div>
-      <div class="actions">
-        <a class="btn ghost" href="https://app.somtms.com" target="_blank" rel="noopener">Login</a>
-        <a class="btn primary" href="contact.html">Request a demo</a>
-        <button class="mobile-toggle" aria-label="Menu">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-    </div>
-    <div class="mobile-menu">
-      <a href="index.html">Home</a>
-      <a href="features.html">Features</a>
-      <a href="pricing.html">Pricing</a>
-      <a href="security.html">Security</a>
-      <a href="contact.html">Contact</a>
-      <div style="margin-top:12px; border-top:1px solid var(--border); padding-top:12px">
-        <a href="https://app.somtms.com">Login</a>
-      </div>
-    </div>
-  </div>
-
-
-  <div class="page">
+  <div id="siteHeader"></div>
+  <main class="section">
     <div class="container">
-      <h1>Privacy</h1>
-      <p class="sub">Placeholder privacy policy for SomTMS. Replace with your formal policy before public launch.</p>
-
-      <div class="panel list">
-        <h2>What we collect</h2>
-        <ul>
-          <li>Account information (email, role, company membership)</li>
-          <li>Operational TMS data (loads, invoices, settlements, documents)</li>
-          <li>Basic usage data for troubleshooting and product improvement</li>
-        </ul>
-        <h2>How we use it</h2>
-        <ul>
-          <li>To provide the service and support customers</li>
-          <li>To secure accounts and prevent abuse</li>
-          <li>To improve reliability and performance</li>
-        </ul>
-        <p class="notice" style="margin-top:10px">
-          We can generate a full privacy policy once you confirm analytics and support tools you plan to use.
-        </p>
+      <h1 class="h1" style="font-size:44px; margin-top:0;">Privacy</h1>
+      <p class="lead">Placeholder privacy policy. Replace with your real policy before launch.</p>
+      <div class="note">
+        <p>SomTMS collects only the information needed to provide the service. Contact us for questions.</p>
       </div>
     </div>
-  </div>
-
-
-  <div class="footer">
-    <div class="container">
-      <div class="fgrid">
-        <div>
-          <div class="brand">
-            <span class="logo">S</span>
-            <span>SomTMS</span>
-          </div>
-          <p class="small footer-desc">
-            A modern TMS for carriers: load lifecycle, dispatch, settlements, AR, tasks, and reporting —
-            built to stay fast, clean, and scalable.
-          </p>
-        </div>
-        <div>
-          <div class="footer-head">Product</div>
-          <div class="small footer-links">
-            <a href="features.html">Features</a>
-            <a href="pricing.html">Pricing</a>
-            <a href="security.html">Security</a>
-            <a href="https://app.somtms.com" target="_blank" rel="noopener">Login</a>
-          </div>
-        </div>
-        <div>
-          <div class="footer-head">Company</div>
-          <div class="small footer-links">
-            <a href="contact.html">Contact</a>
-            <a href="terms.html">Terms</a>
-            <a href="privacy.html">Privacy</a>
-          </div>
-        </div>
-      </div>
-      <hr class="sep" />
-      <div class="small">© 2025 SomTMS. All rights reserved.</div>
-    </div>
-  </div>
-
-  <script src="assets/site.js"></script>
+  </main>
+  <div id="siteFooter"></div>
+  <script src="/partials.js?v=2"></script>
+  <script src="/app.js?v=2"></script>
+  <script>siteHeader.innerHTML = renderHeader(""); siteFooter.innerHTML = renderFooter();</script>
 </body>
 
 </html>

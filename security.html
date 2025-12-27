@@ -4,139 +4,74 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>SomTMS Security — Tenant isolation, RBAC, audit trail</title>
+  <title>SomTMS Security</title>
   <meta name="description"
-    content="SomTMS security approach: tenant isolation on Firebase, role-based access, and audit trails for carriers." />
-  <meta property="og:title" content="SomTMS Security — Tenant isolation, RBAC, audit trail" />
-  <meta property="og:description"
-    content="SomTMS security approach: tenant isolation on Firebase, role-based access, and audit trails for carriers." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://somtms.com/security.html" />
-  <meta name="theme-color" content="#ffffff" />
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="assets/styles.css" />
+    content="Commercial-grade security practices designed for multi-company usage on Firebase." />
+  <link rel="stylesheet" href="/styles.css?v=2" />
 </head>
 
 <body>
-  <div class="nav">
-    <div class="container nav-inner">
-      <a class="brand" href="index.html" aria-label="SomTMS Home">
-        <span class="logo">S</span>
-        <span>SomTMS</span>
-      </a>
-      <div class="nav-links" role="navigation" aria-label="Primary">
-        <a href="index.html">Home</a>
-        <a href="features.html">Features</a>
-        <a href="pricing.html">Pricing</a>
-        <a href="security.html">Security</a>
-        <a href="contact.html">Contact</a>
-      </div>
-      <div class="actions">
-        <a class="btn ghost" href="https://app.somtms.com" target="_blank" rel="noopener">Login</a>
-        <a class="btn primary" href="contact.html">Request a demo</a>
-        <button class="mobile-toggle" aria-label="Menu">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-    </div>
-    <div class="mobile-menu">
-      <a href="index.html">Home</a>
-      <a href="features.html">Features</a>
-      <a href="pricing.html">Pricing</a>
-      <a href="security.html">Security</a>
-      <a href="contact.html">Contact</a>
-      <div style="margin-top:12px; border-top:1px solid var(--border); padding-top:12px">
-        <a href="https://app.somtms.com">Login</a>
-      </div>
-    </div>
-  </div>
+  <div id="siteHeader"></div>
 
-
-  <div class="page">
+  <main class="section">
     <div class="container">
-      <h1>Security</h1>
-      <p class="sub">Commercial-grade security practices designed for multi-company usage on Firebase.</p>
-
-      <div class="split">
-        <div class="panel list">
-          <h2>Security Infrastructure</h2>
-          <ul>
-            <li><b>Strict Tenant Segregation:</b> Data is architecturally siloed via mandated tenant-scoped paths.</li>
-            <li><b>Granular RBAC:</b> Permission boundaries enforce least-privilege access for all operations.</li>
-            <li><b>Immutable Audit Logging:</b> Forensic-grade tracking of financial events and state changes.</li>
-            <li><b>Temporal Integrity:</b> Standardized UTC handling eliminates timezone-based reporting anomalies.</li>
-          </ul>
-        </div>
-        <div class="panel list">
-          <h2>Operational Protocols</h2>
-          <ul>
-            <li><b>Identity Management:</b> Secure session handling via industry-standard authentication providers.</li>
-            <li><b>Token Hygiene:</b> Proactive prevention of detailed token persistence vectors.</li>
-            <li><b>Server-Side Validation:</b> High-trust logic execution in isolated cloud environments.</li>
-            <li><b>Threat Monitoring:</b> Continuous anomaly detection and automated error telemetry.</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="callout">
-        <div class="callout-title">Administrative Oversight</div>
-        Platform administrators utilize a segregated console for support operations, ensuring strict separation of
-        concerns from client environments.
-      </div>
-
-      <div class="panel list">
-        <h2>Data Lifecycle & Continuity</h2>
-        <ul>
-          <li><b>Disaster Recovery:</b> Automated redundancy for critical financial records.</li>
-          <li><b>Compliance Logging:</b> Extended retention of audit trails for dispute resolution.</li>
-          <li><b>Data Sovereignty:</b> Explicit ownership resolution for tenant-scoped datasets.</li>
-        </ul>
-      </div>
-      <p class="notice" style="margin-top:10px">
-        This page is informational and can be expanded with your formal security policy once you launch.
+      <h1 class="h1" style="font-size:44px; margin-top:0;">Security</h1>
+      <p class="lead" style="max-width:80ch;">
+        Commercial-grade security practices designed for multi-company usage on Firebase: tenant-scoped data,
+        least-privilege access, audit trails, and operational controls.
       </p>
-    </div>
-  </div>
-  </div>
 
-
-  <div class="footer">
-    <div class="container">
-      <div class="fgrid">
-        <div>
-          <div class="brand">
-            <span class="logo">S</span>
-            <span>SomTMS</span>
-          </div>
-          <p class="small footer-desc">
-            A modern TMS for carriers: load lifecycle, dispatch, settlements, AR, tasks, and reporting —
-            built to stay fast, clean, and scalable.
-          </p>
+      <div class="split" style="margin-top:18px;">
+        <div class="note">
+          <h4>Security infrastructure</h4>
+          <ul>
+            <li><strong>Tenant segregation:</strong> data is siloed under company-scoped paths</li>
+            <li><strong>Granular RBAC:</strong> least-privilege permissions per role</li>
+            <li><strong>Audit logging:</strong> track financial events and state changes</li>
+            <li><strong>Date integrity:</strong> date-only storage eliminates timezone reporting issues</li>
+          </ul>
         </div>
-        <div>
-          <div class="footer-head">Product</div>
-          <div class="small footer-links">
-            <a href="features.html">Features</a>
-            <a href="pricing.html">Pricing</a>
-            <a href="security.html">Security</a>
-            <a href="https://app.somtms.com" target="_blank" rel="noopener">Login</a>
-          </div>
-        </div>
-        <div>
-          <div class="footer-head">Company</div>
-          <div class="small footer-links">
-            <a href="contact.html">Contact</a>
-            <a href="terms.html">Terms</a>
-            <a href="privacy.html">Privacy</a>
-          </div>
+        <div class="note">
+          <h4>Operational protocols</h4>
+          <ul>
+            <li><strong>Identity management:</strong> secure sessions via Firebase Auth</li>
+            <li><strong>Token hygiene:</strong> avoid storing sensitive tokens in localStorage</li>
+            <li><strong>Server-side validation:</strong> protect critical actions via Cloud Functions</li>
+            <li><strong>Monitoring:</strong> error telemetry + anomaly alerts</li>
+          </ul>
         </div>
       </div>
-      <hr class="sep" />
-      <div class="small">© 2025 SomTMS. All rights reserved.</div>
-    </div>
-  </div>
 
-  <script src="assets/site.js"></script>
+      <div class="note" style="margin-top:14px;">
+        <strong>Administrative oversight</strong>
+        <p style="margin:8px 0 0;">
+          Platform administrators use a separate console for support operations, ensuring clear separation between
+          client environments and admin tooling.
+        </p>
+      </div>
+
+      <div class="note" style="margin-top:14px;">
+        <strong>Data lifecycle & continuity</strong>
+        <ul>
+          <li><strong>Backups:</strong> scheduled exports + retention for business continuity</li>
+          <li><strong>Compliance logging:</strong> long-term audit retention for disputes</li>
+          <li><strong>Data ownership:</strong> tenant-scoped datasets with explicit access boundaries</li>
+        </ul>
+        <p class="small" style="margin:10px 0 0;">
+          This page can be expanded with your formal security policy once you launch.
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <div id="siteFooter"></div>
+
+  <script src="/partials.js?v=2"></script>
+  <script src="/app.js?v=2"></script>
+  <script>
+    document.getElementById("siteHeader").innerHTML = renderHeader("security");
+    document.getElementById("siteFooter").innerHTML = renderFooter();
+  </script>
 </body>
 
 </html>

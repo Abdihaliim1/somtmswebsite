@@ -4,121 +4,82 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>SomTMS Features — Loads, Dispatch, Invoicing, Settlements</title>
-  <meta name="description"
-    content="Explore SomTMS features: load lifecycle, dispatch, AR, settlements, tasks, alerts, and reporting for carriers." />
-  <meta property="og:title" content="SomTMS Features — Loads, Dispatch, Invoicing, Settlements" />
-  <meta property="og:description"
-    content="Explore SomTMS features: load lifecycle, dispatch, AR, settlements, tasks, alerts, and reporting for carriers." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://somtms.com/features.html" />
-  <meta name="theme-color" content="#ffffff" />
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="assets/styles.css" />
+  <title>SomTMS Features</title>
+  <meta name="description" content="A standard carrier TMS feature set — focused on what you actually use every day." />
+  <link rel="stylesheet" href="/styles.css?v=2" />
 </head>
 
 <body>
-  <div class="nav">
-    <div class="container nav-inner">
-      <a class="brand" href="index.html" aria-label="SomTMS Home">
-        <span class="logo">S</span>
-        <span>SomTMS</span>
-      </a>
-      <div class="nav-links" role="navigation" aria-label="Primary">
-        <a href="index.html">Home</a>
-        <a href="features.html">Features</a>
-        <a href="pricing.html">Pricing</a>
-        <a href="security.html">Security</a>
-        <a href="contact.html">Contact</a>
-      </div>
-      <div class="actions">
-        <a class="btn ghost" href="https://app.somtms.com" target="_blank" rel="noopener">Login</a>
-        <a class="btn primary" href="contact.html">Request a demo</a>
-        <button class="mobile-toggle" aria-label="Menu">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-    </div>
-    <div class="mobile-menu">
-      <a href="index.html">Home</a>
-      <a href="features.html">Features</a>
-      <a href="pricing.html">Pricing</a>
-      <a href="security.html">Security</a>
-      <a href="contact.html">Contact</a>
-      <div style="margin-top:12px; border-top:1px solid var(--border); padding-top:12px">
-        <a href="https://app.somtms.com">Login</a>
-      </div>
-    </div>
-  </div>
+  <div id="siteHeader"></div>
 
-
-  <div class="page">
+  <main class="section">
     <div class="container">
-      <h1>Features</h1>
-      <p class="sub">A standard carrier TMS feature set — focused on what you actually use every day.</p>
+      <h1 class="h1" style="font-size:44px; margin-top:0;">Features</h1>
+      <p class="lead" style="max-width:75ch;">
+        A standard carrier TMS feature set — focused on what teams use daily. Keep operations separate from finance,
+        with guardrails that prevent expensive mistakes.
+      </p>
 
-      <div class="features">
-        <div class="card feature">
-          <div class="icon">🚚</div>
+      <div class="grid3" style="margin-top:18px;">
+        <div class="card">
+          <div class="icon">LD</div>
           <h3>Loads</h3>
-          <p>Load creation, statuses, lane details, accessorials, notes, and document requirements.</p>
+          <p>Creation, statuses, lane details, accessorials, notes, and document requirements.</p>
         </div>
-        <div class="card feature">
-          <div class="icon">🧭</div>
+        <div class="card">
+          <div class="icon">DB</div>
           <h3>Dispatch board</h3>
           <p>Plan, assign, and keep visibility. Keep operational work separate from finance.</p>
         </div>
-        <div class="card feature">
-          <div class="icon">👥</div>
+        <div class="card">
+          <div class="icon">EM</div>
           <h3>Employees</h3>
           <p>Driver and staff records with roles and permissions.</p>
         </div>
-        <div class="card feature">
-          <div class="icon">🛠️</div>
+        <div class="card">
+          <div class="icon">FL</div>
           <h3>Fleet</h3>
           <p>Trucks, trailers, equipment records. Extend with maintenance tracking when needed.</p>
         </div>
-        <div class="card feature">
-          <div class="icon">🧾</div>
+        <div class="card">
+          <div class="icon">AR</div>
           <h3>Account receivables</h3>
           <p>Invoices, aging, paid status, and follow-up workflows.</p>
         </div>
-        <div class="card feature">
-          <div class="icon">💸</div>
+        <div class="card">
+          <div class="icon">$</div>
           <h3>Settlements</h3>
-          <p>Company driver and owner-operator pay structures, deductions, and adjustments.</p>
+          <p>Company driver and owner-operator pay structures, deductions, adjustments.</p>
         </div>
-        <div class="card feature">
-          <div class="icon">✅</div>
+        <div class="card">
+          <div class="icon">TA</div>
           <h3>Tasks & alerts</h3>
-          <p>Automatically generated tasks for POD collection, pickup checks, and invoicing readiness.</p>
+          <p>Automatically generated tasks for POD, collection, pickup checks, invoicing readiness.</p>
         </div>
-        <div class="card feature">
-          <div class="icon">📈</div>
+        <div class="card">
+          <div class="icon">RP</div>
           <h3>Reports</h3>
-          <p>KPI dashboards and exports: revenue, profit, performance by lane/customer/driver.</p>
+          <p>KPI dashboards and exports: revenue, profit, lane/customer/driver performance.</p>
         </div>
-        <div class="card feature">
-          <div class="icon">🔒</div>
+        <div class="card">
+          <div class="icon">SE</div>
           <h3>Security</h3>
-          <p>Role-based access, audit logs, and commercial-grade tenant isolation on Firebase.</p>
+          <p>Role-based access, audit logs, and tenant isolation patterns on Firebase.</p>
         </div>
       </div>
 
-      <div class="split">
-        <div class="panel list">
-          <h2>Smart workflow defaults</h2>
-          <p>SomTMS is designed to prevent expensive mistakes.</p>
+      <div class="split" style="margin-top:14px;">
+        <div class="note">
+          <h4>Smart workflow defaults</h4>
           <ul>
             <li>Require POD before invoicing</li>
             <li>Flag missing documents and overdue tasks</li>
             <li>Guardrails around settlements and financial edits</li>
-            <li>Consistent monthly reporting using date-only handling</li>
+            <li>Consistent monthly reporting with date-only handling</li>
           </ul>
         </div>
-        <div class="panel list">
-          <h2>Admin support tools</h2>
-          <p>Support teams can diagnose and help quickly.</p>
+        <div class="note">
+          <h4>Admin support tools</h4>
           <ul>
             <li>Admin console with company search</li>
             <li>Enter company (admin mode) for troubleshooting</li>
@@ -128,51 +89,29 @@
         </div>
       </div>
 
-      <div class="callout">
-        <div class="callout-title">Try it now</div>
-        Log in at <a href="https://app.somtms.com" target="_blank" rel="noopener">app.somtms.com</a> or request a demo.
-      </div>
-    </div>
-  </div>
-
-
-  <div class="footer">
-    <div class="container">
-      <div class="fgrid">
+      <div class="note"
+        style="margin-top:14px; display:flex; justify-content:space-between; gap:14px; align-items:center;">
         <div>
-          <div class="brand">
-            <span class="logo">S</span>
-            <span>SomTMS</span>
-          </div>
-          <p class="small footer-desc">
-            A modern TMS for carriers: load lifecycle, dispatch, settlements, AR, tasks, and reporting —
-            built to stay fast, clean, and scalable.
-          </p>
+          <strong>Try it now</strong>
+          <div class="small" style="margin-top:4px;">Log in at <a href="https://app.somtms.com"
+              style="color:var(--brand2); font-weight:900;">app.somtms.com</a> or request a demo.</div>
         </div>
-        <div>
-          <div class="footer-head">Product</div>
-          <div class="small footer-links">
-            <a href="features.html">Features</a>
-            <a href="pricing.html">Pricing</a>
-            <a href="security.html">Security</a>
-            <a href="https://app.somtms.com" target="_blank" rel="noopener">Login</a>
-          </div>
-        </div>
-        <div>
-          <div class="footer-head">Company</div>
-          <div class="small footer-links">
-            <a href="contact.html">Contact</a>
-            <a href="terms.html">Terms</a>
-            <a href="privacy.html">Privacy</a>
-          </div>
+        <div class="cta" style="margin:0;">
+          <a class="btn" href="https://app.somtms.com">Login</a>
+          <a class="btn btn-primary" href="/contact.html">Request a demo</a>
         </div>
       </div>
-      <hr class="sep" />
-      <div class="small">© 2025 SomTMS. All rights reserved.</div>
     </div>
-  </div>
+  </main>
 
-  <script src="assets/site.js"></script>
+  <div id="siteFooter"></div>
+
+  <script src="/partials.js?v=2"></script>
+  <script src="/app.js?v=2"></script>
+  <script>
+    document.getElementById("siteHeader").innerHTML = renderHeader("features");
+    document.getElementById("siteFooter").innerHTML = renderFooter();
+  </script>
 </body>
 
 </html>
