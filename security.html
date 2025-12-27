@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SomTMS Security — Tenant isolation, RBAC, audit trail</title>
+  <meta name="description"
+    content="SomTMS security approach: tenant isolation on Firebase, role-based access, and audit trails for carriers." />
+  <meta property="og:title" content="SomTMS Security — Tenant isolation, RBAC, audit trail" />
+  <meta property="og:description"
+    content="SomTMS security approach: tenant isolation on Firebase, role-based access, and audit trails for carriers." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://somtms.com/security.html" />
+  <meta name="theme-color" content="#ffffff" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+
+<body>
+  <div class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html" aria-label="SomTMS Home">
+        <span class="logo">S</span>
+        <span>SomTMS</span>
+      </a>
+      <div class="nav-links" role="navigation" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="features.html">Features</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="security.html">Security</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="actions">
+        <a class="btn ghost" href="https://app.somtms.com" target="_blank" rel="noopener">Login</a>
+        <a class="btn primary" href="contact.html">Request a demo</a>
+        <button class="mobile-toggle" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div class="mobile-menu">
+      <a href="index.html">Home</a>
+      <a href="features.html">Features</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="security.html">Security</a>
+      <a href="contact.html">Contact</a>
+      <div style="margin-top:12px; border-top:1px solid var(--border); padding-top:12px">
+        <a href="https://app.somtms.com">Login</a>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="page">
+    <div class="container">
+      <h1>Security</h1>
+      <p class="sub">Commercial-grade security practices designed for multi-company usage on Firebase.</p>
+
+      <div class="split">
+        <div class="panel list">
+          <h2>Security Infrastructure</h2>
+          <ul>
+            <li><b>Strict Tenant Segregation:</b> Data is architecturally siloed via mandated tenant-scoped paths.</li>
+            <li><b>Granular RBAC:</b> Permission boundaries enforce least-privilege access for all operations.</li>
+            <li><b>Immutable Audit Logging:</b> Forensic-grade tracking of financial events and state changes.</li>
+            <li><b>Temporal Integrity:</b> Standardized UTC handling eliminates timezone-based reporting anomalies.</li>
+          </ul>
+        </div>
+        <div class="panel list">
+          <h2>Operational Protocols</h2>
+          <ul>
+            <li><b>Identity Management:</b> Secure session handling via industry-standard authentication providers.</li>
+            <li><b>Token Hygiene:</b> Proactive prevention of detailed token persistence vectors.</li>
+            <li><b>Server-Side Validation:</b> High-trust logic execution in isolated cloud environments.</li>
+            <li><b>Threat Monitoring:</b> Continuous anomaly detection and automated error telemetry.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="callout">
+        <div class="callout-title">Administrative Oversight</div>
+        Platform administrators utilize a segregated console for support operations, ensuring strict separation of
+        concerns from client environments.
+      </div>
+
+      <div class="panel list">
+        <h2>Data Lifecycle & Continuity</h2>
+        <ul>
+          <li><b>Disaster Recovery:</b> Automated redundancy for critical financial records.</li>
+          <li><b>Compliance Logging:</b> Extended retention of audit trails for dispute resolution.</li>
+          <li><b>Data Sovereignty:</b> Explicit ownership resolution for tenant-scoped datasets.</li>
+        </ul>
+      </div>
+      <p class="notice" style="margin-top:10px">
+        This page is informational and can be expanded with your formal security policy once you launch.
+      </p>
+    </div>
+  </div>
+  </div>
+
+
+  <div class="footer">
+    <div class="container">
+      <div class="fgrid">
+        <div>
+          <div class="brand">
+            <span class="logo">S</span>
+            <span>SomTMS</span>
+          </div>
+          <p class="small footer-desc">
+            A modern TMS for carriers: load lifecycle, dispatch, settlements, AR, tasks, and reporting —
+            built to stay fast, clean, and scalable.
+          </p>
+        </div>
+        <div>
+          <div class="footer-head">Product</div>
+          <div class="small footer-links">
+            <a href="features.html">Features</a>
+            <a href="pricing.html">Pricing</a>
+            <a href="security.html">Security</a>
+            <a href="https://app.somtms.com" target="_blank" rel="noopener">Login</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-head">Company</div>
+          <div class="small footer-links">
+            <a href="contact.html">Contact</a>
+            <a href="terms.html">Terms</a>
+            <a href="privacy.html">Privacy</a>
+          </div>
+        </div>
+      </div>
+      <hr class="sep" />
+      <div class="small">© 2025 SomTMS. All rights reserved.</div>
+    </div>
+  </div>
+
+  <script src="assets/site.js"></script>
+</body>
+
+</html>

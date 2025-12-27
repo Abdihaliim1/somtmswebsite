@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://somtms.com/sitemap.xml
