@@ -23,6 +23,23 @@
   --link: #1d4ed8;
 }
 
+.call-now {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--brand);
+  margin-bottom: 24px;
+  display: block;
+  letter-spacing: -0.5px;
+}
+
+.call-now span {
+  color: var(--muted);
+  font-size: 18px;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 4px;
+}
+
 * {
   box-sizing: border-box;
 }
