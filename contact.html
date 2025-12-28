@@ -7,7 +7,7 @@
   <title>Contact SomTMS</title>
   <meta name="description"
     content="Tell us about your fleet and what you want to improve. We'll respond with next steps." />
-  <link rel="stylesheet" href="/styles.css?v=2" />
+  <link rel="stylesheet" href="/styles.css?v=3" />
 </head>
 
 <body>
@@ -20,29 +20,41 @@
         next steps.</p>
 
       <div class="split" style="margin-top:18px;">
-        <div class="form">
-          <div class="field">
-            <label>Your name</label>
-            <input class="input" id="name" placeholder="Name" />
-          </div>
-          <div class="field">
-            <label>Company name</label>
-            <input class="input" id="company" placeholder="Company" />
-          </div>
-          <div class="field">
-            <label>Email</label>
-            <input class="input" id="email" placeholder="Email" />
-          </div>
-          <div class="field">
-            <label>What are you looking for?</label>
-            <textarea class="textarea" id="msg" placeholder="Loads, dispatch, settlements, AR, reporting..."></textarea>
-          </div>
+        <div>
+          <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="contactForm">
+            <input type="hidden" name="form-name" value="contact" />
+            <p style="display:none;">
+              <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+            </p>
 
-          <button class="btn btn-primary" id="sendBtn" style="width:100%">Send</button>
-          <p class="small" style="margin:10px 0 0;">
-            This opens your email client. If you prefer, email <strong>1@asal.llc</strong>. Login is always at
-            <a href="https://app.somtms.com" style="color:var(--brand2); font-weight:900;">app.somtms.com</a>.
-          </p>
+            <div class="field">
+              <label for="name">Your name *</label>
+              <input class="input" type="text" id="name" name="name" placeholder="Name" required />
+            </div>
+            <div class="field">
+              <label for="company">Company name *</label>
+              <input class="input" type="text" id="company" name="company" placeholder="Company" required />
+            </div>
+            <div class="field">
+              <label for="email">Email *</label>
+              <input class="input" type="email" id="email" name="email" placeholder="Email" required />
+            </div>
+            <div class="field">
+              <label for="message">What are you looking for? *</label>
+              <textarea class="textarea" id="message" name="message" placeholder="Loads, dispatch, settlements, AR, reporting..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" id="sendBtn" style="width:100%">
+              <span id="btnText">Send</span>
+            </button>
+
+            <div id="formStatus" style="margin-top:14px; display:none;"></div>
+
+            <p class="small" style="margin:10px 0 0;">
+              Or email us directly at <strong>1@asal.llc</strong>. Login is always at
+              <a href="https://app.somtms.com" style="color:var(--brand2); font-weight:900;">app.somtms.com</a>.
+            </p>
+          </form>
         </div>
 
         <div>
@@ -79,17 +91,41 @@
     document.getElementById("siteHeader").innerHTML = renderHeader("contact");
     document.getElementById("siteFooter").innerHTML = renderFooter();
 
-    document.getElementById("sendBtn").addEventListener("click", () => {
-      const name = document.getElementById("name").value.trim();
-      const company = document.getElementById("company").value.trim();
-      const email = document.getElementById("email").value.trim();
-      const msg = document.getElementById("msg").value.trim();
+    // Handle form submission
+    const form = document.getElementById("contactForm");
+    const btnText = document.getElementById("btnText");
+    const formStatus = document.getElementById("formStatus");
 
-      const subject = encodeURIComponent("SomTMS demo request");
-      const body = encodeURIComponent(
-        `Name: ${name}\nCompany: ${company}\nEmail: ${email}\n\nMessage:\n${msg}\n\nLogin: https://app.somtms.com`
-      );
-      window.location.href = `mailto:1@asal.llc?subject=${subject}&body=${body}`;
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      // Show loading state
+      btnText.textContent = "Sending...";
+      form.querySelector('button[type="submit"]').disabled = true;
+      formStatus.style.display = "none";
+
+      try {
+        const formData = new FormData(form);
+        const response = await fetch("/", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: new URLSearchParams(formData).toString()
+        });
+
+        if (response.ok) {
+          formStatus.innerHTML = '<div class="note" style="background:#d1fae5; border-color:#10b981;"><p style="margin:0; color:#065f46;"><strong>Success!</strong> We\'ll get back to you soon.</p></div>';
+          formStatus.style.display = "block";
+          form.reset();
+        } else {
+          throw new Error("Form submission failed");
+        }
+      } catch (error) {
+        formStatus.innerHTML = '<div class="note" style="background:#fee2e2; border-color:#ef4444;"><p style="margin:0; color:#991b1b;"><strong>Error:</strong> Please email us directly at 1@asal.llc</p></div>';
+        formStatus.style.display = "block";
+      } finally {
+        btnText.textContent = "Send";
+        form.querySelector('button[type="submit"]').disabled = false;
+      }
     });
   </script>
 </body>

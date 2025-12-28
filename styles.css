@@ -1,27 +1,38 @@
-/* SomTMS — clean SaaS style (industry standard)
-   - neutral palette
-   - subtle borders/shadows
-   - readable spacing
+/* SomTMS — Enterprise TMS Design System
+   - Professional logistics/transportation branding
+   - Deep blue for trust & reliability
+   - Enhanced components for enterprise readiness
 */
 
 :root {
     --bg: #ffffff;
-    --muted: #f7f8fa;
-    --muted2: #f2f4f7;
+    --bg-alt: #f8f9fb;
+    --muted: #f1f3f5;
+    --muted2: #e8ebf0;
     --text: #0f172a;
-    --sub: #475569;
-    --line: #e5e7eb;
-    --line2: #eef2f7;
-    --brand: #2563eb;
-    --brand2: #1d4ed8;
-    --good: #16a34a;
+    --text-light: #334155;
+    --sub: #64748b;
+    --line: #cbd5e1;
+    --line2: #e2e8f0;
+    /* Enterprise TMS Blue Palette - Deep ocean blue for trust */
+    --brand: #1e40af;
+    --brand-light: #3b82f6;
+    --brand-dark: #1e3a8a;
+    --brand-subtle: #eff6ff;
+    /* Accent colors */
+    --accent: #0891b2;
+    --accent-light: #06b6d4;
+    --good: #059669;
     --warn: #f59e0b;
-    --bad: #ef4444;
-    --shadow: 0 10px 25px rgba(15, 23, 42, .06);
-    --shadow2: 0 6px 18px rgba(15, 23, 42, .08);
-    --radius: 14px;
-    --radius2: 18px;
-    --max: 1120px;
+    --bad: #dc2626;
+    /* Shadows for depth */
+    --shadow-sm: 0 1px 2px rgba(15, 23, 42, .05);
+    --shadow: 0 4px 12px rgba(15, 23, 42, .08);
+    --shadow-md: 0 8px 24px rgba(15, 23, 42, .10);
+    --shadow-lg: 0 16px 48px rgba(15, 23, 42, .12);
+    --radius: 12px;
+    --radius-lg: 16px;
+    --max: 1200px;
     --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
 }
 
@@ -533,6 +544,250 @@ p {
     margin: 22px 0;
 }
 
+/* Enterprise TMS Components */
+
+.stats-bar {
+    background: linear-gradient(135deg, var(--brand-dark) 0%, var(--brand) 100%);
+    padding: 48px 0;
+    color: white;
+    margin: 60px 0;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+    text-align: center;
+}
+
+.stat-item {
+    padding: 20px;
+}
+
+.stat-number {
+    font-size: 48px;
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    line-height: 1;
+    margin-bottom: 8px;
+}
+
+.stat-label {
+    font-size: 14px;
+    opacity: 0.9;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.trust-badges {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    padding: 32px 0;
+    flex-wrap: wrap;
+}
+
+.trust-badge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 16px 24px;
+    background: var(--bg);
+    border: 1px solid var(--line2);
+    border-radius: var(--radius);
+    text-align: center;
+}
+
+.trust-badge-icon {
+    width: 48px;
+    height: 48px;
+    display: grid;
+    place-items: center;
+    font-size: 24px;
+}
+
+.trust-badge-text {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--sub);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.feature-highlight {
+    background: var(--brand-subtle);
+    border: 1px solid var(--brand-light);
+    border-left: 4px solid var(--brand);
+    border-radius: var(--radius);
+    padding: 24px;
+    margin: 24px 0;
+}
+
+.feature-highlight h3 {
+    color: var(--brand-dark);
+    margin-top: 0;
+}
+
+.testimonial {
+    background: white;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    padding: 32px;
+    box-shadow: var(--shadow);
+}
+
+.testimonial-quote {
+    font-size: 18px;
+    line-height: 1.6;
+    color: var(--text-light);
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.testimonial-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--brand-subtle);
+    display: grid;
+    place-items: center;
+    font-weight: 900;
+    color: var(--brand);
+}
+
+.testimonial-info {
+    flex: 1;
+}
+
+.testimonial-name {
+    font-weight: 700;
+    color: var(--text);
+    margin: 0;
+}
+
+.testimonial-title {
+    font-size: 14px;
+    color: var(--sub);
+    margin: 4px 0 0;
+}
+
+.integration-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    margin-top: 24px;
+}
+
+.integration-card {
+    background: white;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 20px;
+    text-align: center;
+    transition: all 0.2s ease;
+}
+
+.integration-card:hover {
+    border-color: var(--brand-light);
+    box-shadow: var(--shadow);
+    transform: translateY(-2px);
+}
+
+.integration-icon {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 12px;
+    display: grid;
+    place-items: center;
+    background: var(--muted);
+    border-radius: var(--radius);
+    font-size: 32px;
+}
+
+.cta-section {
+    background: linear-gradient(135deg, var(--brand) 0%, var(--brand-dark) 100%);
+    border-radius: var(--radius-lg);
+    padding: 60px 40px;
+    text-align: center;
+    color: white;
+    margin: 60px 0;
+    box-shadow: var(--shadow-lg);
+}
+
+.cta-section h2 {
+    font-size: 36px;
+    margin: 0 0 16px;
+    color: white;
+}
+
+.cta-section p {
+    font-size: 18px;
+    opacity: 0.95;
+    max-width: 600px;
+    margin: 0 auto 32px;
+    color: white;
+}
+
+.cta-section .btn {
+    background: white;
+    color: var(--brand);
+    border: none;
+    padding: 14px 32px;
+    font-size: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.cta-section .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}
+
+.process-steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin: 40px 0;
+}
+
+.process-step {
+    position: relative;
+    text-align: center;
+    padding: 32px 24px;
+}
+
+.process-step-number {
+    width: 56px;
+    height: 56px;
+    background: var(--brand);
+    color: white;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 24px;
+    font-weight: 900;
+    margin: 0 auto 16px;
+    box-shadow: var(--shadow-md);
+}
+
+.process-step h4 {
+    margin: 0 0 12px;
+    font-size: 18px;
+}
+
+.process-step p {
+    margin: 0;
+    font-size: 14px;
+}
+
 @media (max-width: 980px) {
     .hgrid {
         grid-template-columns: 1fr;
@@ -569,5 +824,26 @@ p {
 
     .footgrid {
         grid-template-columns: 1fr;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+
+    .stat-number {
+        font-size: 36px;
+    }
+
+    .process-steps {
+        grid-template-columns: 1fr;
+    }
+
+    .cta-section {
+        padding: 40px 24px;
+    }
+
+    .cta-section h2 {
+        font-size: 28px;
     }
 }
